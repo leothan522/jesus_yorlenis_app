@@ -4,7 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Yorlenis App') }}</title>
+
+        <meta name="description" content="Dra. Yorlenis Uzcátegui · Ginecólogo Obstetra · ULA">
+        <meta name="theme-color" content="#1a1a1a">
+
+        {{-- Favicon y PWA --}}
+        <link rel="manifest" href="{{ asset('manifest.json') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/appicon-32x32.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('favicons/appicon-128x128.png') }}">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -274,5 +287,16 @@
             <div class="h-14.5 hidden lg:block"></div>
         @endif
         @include('sweetalert2::index')
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("{{ asset('service-worker.js') }}")
+                    .then(registration => {
+                        console.log('✅ Service Worker registrado. Scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.warn('⚠️ Error al registrar el Service Worker:', error);
+                    });
+            }
+        </script>
     </body>
 </html>

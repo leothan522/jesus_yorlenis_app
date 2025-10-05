@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f9fa">
+    <meta name="robots" content="noindex">
     <title>Sin conexión · Yorlenis App</title>
     <style>
         :root {
@@ -55,6 +57,19 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        .offline-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecer 0.6s ease-out forwards;
+        }
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body>

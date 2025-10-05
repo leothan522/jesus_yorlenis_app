@@ -12,7 +12,7 @@ Route::get('/', function () {
         'position' => 'top',
         'timer' => 3000,
     ]);
-    return view('welcome');
+    return view('web.index');
 })->name('web.index');
 
 Route::middleware([

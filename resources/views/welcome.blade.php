@@ -289,13 +289,11 @@
         @include('sweetalert2::index')
         <script>
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register("{{ asset('service-worker.js') }}")
-                    .then(registration => {
-                        console.log('✅ Service Worker registrado. Scope:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.warn('⚠️ Error al registrar el Service Worker:', error);
-                    });
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register("{{ asset('service-worker.js') }}")
+                        .then(reg => console.log('✅ Service Worker registrado en:', reg.scope))
+                        .catch(err => console.error('⚠️ Error al registrar el Service Worker:', err));
+                });
             }
         </script>
     </body>

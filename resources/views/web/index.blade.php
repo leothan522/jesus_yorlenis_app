@@ -9,11 +9,11 @@
     <!-- /About Section -->
 
     <!-- Stats Section -->
-    @include('web.sections.stats-section')
+    {{--@include('web.sections.stats-section')--}}
     <!-- /Stats Section -->
 
     <!-- Services Section -->
-    @include('web.sections.services-section')
+    {{--@include('web.sections.services-section')--}}
     <!-- /Services Section -->
 
     <!-- Appointment Section -->
@@ -21,7 +21,7 @@
     <!-- /Appointment Section -->
 
     <!-- Departments Section -->
-    @include('web.sections.departments-section')
+    {{--@include('web.sections.departments-section')--}}
     <!-- /Departments Section -->
 
     <!-- Doctors Section -->
@@ -29,19 +29,19 @@
     <!-- /Doctors Section -->
 
     <!-- Faq Section -->
-    @include('web.sections.faq-section')
+    {{--@include('web.sections.faq-section')--}}
     <!-- /Faq Section -->
 
     <!-- Testimonials Section -->
-    @include('web.sections.testimonials-section')
+    {{--@include('web.sections.testimonials-section')--}}
     <!-- /Testimonials Section -->
 
     <!-- Gallery Section -->
-    @include('web.sections.gallery-section')
+    {{--@include('web.sections.gallery-section')--}}
     <!-- /Gallery Section -->
 
     <!-- Contact Section -->
-    @include('web.sections.contact-section')
+    {{--@include('web.sections.contact-section')--}}
     <!-- /Contact Section -->
 
 @endsection

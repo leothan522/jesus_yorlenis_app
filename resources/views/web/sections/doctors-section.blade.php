@@ -1,5 +1,42 @@
 <section id="doctors" class="doctors section">
 
+    <!-- Título de sección -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Especialista</h2>
+        <p>Conoce a la Dra. Yorlenis Uzcátegui, ginecólogo y obstetra con amplia experiencia y vocación por el bienestar femenino.</p>
+    </div><!-- Fin Título -->
+
+    <div class="container">
+
+        <div class="row gy-4 justify-content-center">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-member d-flex align-items-start">
+                    <div class="pic">
+                        <img src="{{ asset('vendor/medilab/assets/img/doctors/doctors-2.jpg') }}" class="img-fluid" alt="Dra. Yorlenis Uzcátegui">
+                    </div>
+                    <div class="member-info">
+                        <h4>Dra. Yorlenis Uzcátegui</h4>
+                        <span>Ginecólogo · Obstetra · ULA</span>
+                        <p>Especialista en planificación familiar, control prenatal, menopausia, cirugía ginecológica y atención integral de la salud femenina.</p>
+                        <div class="social">
+                            <a href="https://instagram.com/usuario" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="https://facebook.com/usuario" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://wa.me/584240000000?text=Hola%20Dra.%20Yorlenis%2C%20quisiera%20agendar%20una%20consulta" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:correo@ejemplo.com"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Fin Especialista -->
+
+        </div>
+
+    </div>
+
+</section>
+
+{{--<section id="doctors" class="doctors section">
+
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
         <h2>Doctors</h2>
@@ -82,4 +119,4 @@
 
     </div>
 
-</section>
+</section>--}}

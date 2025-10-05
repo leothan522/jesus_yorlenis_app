@@ -1,5 +1,63 @@
 <footer id="footer" class="footer light-background">
 
+    <div class="container footer-top d-none d-md-block">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a href="{{ route('web.index') }}" class="logo d-flex align-items-center">
+                    <span class="sitename">Dra. Yorlenis Uzcátegui</span>
+                </a>
+                <div class="footer-contact pt-3">
+                    <p>Consultorio privado</p>
+                    <p>Acarigua, Portuguesa, Venezuela</p>
+                    <p class="mt-3"><strong>Teléfono:</strong> <span>+58 424 000 0000</span></p>
+                    <p><strong>Correo:</strong> <span>consultorio@dra-yorlenis.com</span></p>
+                </div>
+                <div class="social-links d-flex mt-4">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="https://wa.me/584240000000" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Enlaces útiles</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre la doctora</a></li>
+                    <li><a href="#appointment">Agendar cita</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><span {{--href="#"--}}>Consulta ginecológica</span></li>
+                    <li><span {{--href="#"--}}>Control prenatal</span></li>
+                    <li><span {{--href="#"--}}>Planificación familiar</span></li>
+                    <li><span {{--href="#"--}}>Cirugía ginecológica</span></li>
+                    <li><span {{--href="#"--}}>Menopausia y salud hormonal</span></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-links">
+                <h4>Frase institucional</h4>
+                <p class="fst-italic">Tu salud, mi compromiso. Atención cálida, profesional y especializada en cada etapa de tu vida.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+        <p>© <strong class="px-1 sitename">Dra. Yorlenis Uzcátegui</strong> <span class="d-none d-md-inline-block">Todos los derechos reservados</span></p>
+        <div class="credits">
+            Desarrollado por <a href="https://t.me/Leothan" target="_blank">Ing. Yonathan Castillo</a>
+        </div>
+    </div>
+
+</footer>
+
+{{--<footer id="footer" class="footer light-background">
+
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
@@ -78,4 +136,4 @@
         </div>
     </div>
 
-</footer>
+</footer>--}}

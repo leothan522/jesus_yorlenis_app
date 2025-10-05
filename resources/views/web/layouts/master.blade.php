@@ -44,6 +44,7 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 
+    <link href="{{ asset('css/web/style.css') }}" rel="stylesheet">
     @stack('css')
     @livewireStyles
 </head>

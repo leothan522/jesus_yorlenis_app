@@ -1,4 +1,94 @@
-<section id="services" class="services section">
+<section id="services" class="services section d-none d-md-block">
+
+    <!-- Título de sección -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <p>Atención ginecológica especializada en cada etapa de tu vida, con diagnóstico preciso y acompañamiento humano.</p>
+    </div><!-- Fin Título -->
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Control prenatal</h3>
+                    </a>
+                    <p>Seguimiento médico durante el embarazo, ecografías, Doppler y preparación para el parto.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Planificación familiar</h3>
+                    </a>
+                    <p>Asesoría en métodos anticonceptivos y orientación personalizada según tu etapa reproductiva.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Cirugía ginecológica</h3>
+                    </a>
+                    <p>Procedimientos quirúrgicos especializados, mínimamente invasivos y con seguimiento postoperatorio.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Biopsias y estudios</h3>
+                    </a>
+                    <p>Diagnóstico preciso mediante biopsias, citologías y estudios complementarios de alta calidad.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Menopausia y salud hormonal</h3>
+                    </a>
+                    <p>Tratamientos para síntomas de la menopausia, prevención de osteoporosis y bienestar integral.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-item position-relative">
+                    <div class="icon">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <a href="#" class="stretched-link">
+                        <h3>Consulta ginecológica</h3>
+                    </a>
+                    <p>Evaluación médica completa, orientación personalizada y seguimiento continuo de tu salud femenina.</p>
+                </div>
+            </div><!-- Fin Servicio -->
+
+        </div>
+
+    </div>
+
+</section>
+
+{{--<section id="services" class="services section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
@@ -89,4 +179,4 @@
 
     </div>
 
-</section>
+</section>--}}

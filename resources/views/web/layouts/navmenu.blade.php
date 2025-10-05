@@ -1,5 +1,17 @@
 <nav id="navmenu" class="navmenu">
     <ul>
+        <li><a href="#hero" class="active">Inicio</a></li>
+        <li><a href="#about">Sobre la doctora</a></li>
+        <li><a href="#doctors">Especialista</a></li>
+        <li><a href="#appointment" class="d-md-none">Agendar cita</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+<a class="cta-btn d-none d-sm-block" href="#appointment">Agendar cita</a>
+
+{{--<nav id="navmenu" class="navmenu">
+    <ul>
         <li><a href="#hero" class="active">Home<br></a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -27,4 +39,4 @@
     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
-<a class="cta-btn d-none d-sm-block" href="#appointment">Make an Appointment</a>
+<a class="cta-btn d-none d-sm-block" href="#appointment">Make an Appointment</a>--}}

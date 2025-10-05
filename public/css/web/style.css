@@ -1,0 +1,15 @@
+.light-background .form-control,
+.light-background .form-select {
+    background-color: #fff !important;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+.light-background .form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.light-background textarea.form-control {
+    background-color: #fff !important;
+}

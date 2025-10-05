@@ -1,19 +1,6 @@
 <?php
 //Funciones Personalizadas para el Proyecto
 
-function sweetAlert2(array $parametros = []): void
-{
-    /*
-     sweetAlert2([
-                    'icon' => 'warning',
-                    'text' => 'Usuario Inactivo',
-                    'timer' => null,
-                    'showCloseButton' => true
-                ]);
-     */
-    session()->flash('sweetAlert2', $parametros);
-}
-
 function isAdmin(): bool
 {
     $response = false;

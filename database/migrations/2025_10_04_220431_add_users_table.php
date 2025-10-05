@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('telefono')->nullable()->after('profile_photo_path');
-            $table->boolean('is_active')->default(true)->after('telefono');
+            $table->string('phone')->nullable()->after('profile_photo_path');
+            $table->boolean('is_active')->default(true)->after('phone');
             $table->boolean('access_panel')->default(false)->after('is_active');
             $table->boolean('is_root')->default(false)->after('access_panel');
             $table->unsignedInteger('login_count')->default(0)->after('is_root');

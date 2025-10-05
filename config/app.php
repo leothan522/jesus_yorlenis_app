@@ -131,5 +131,8 @@ return [
 
     'livewire' => env('APP_ASSET_LIVEWIRE', false),
     'register' => env('REGISTER', false),
+    'root_name' => env('ROOT_NAME', false),
+    'root_email' => env('ROOT_EMAIL', false),
+    'root_password' => env('ROOT_PASSWORD', false),
 
 ];

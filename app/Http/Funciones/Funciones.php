@@ -180,7 +180,14 @@ function cerosIzquierda($cantidad, $cantCeros = 2): int|string
 
 function getParametro($nombre, $column = 'valor_texto'): string
 {
-    $data = [];
+    $data = [
+        'contact_telefono' => '04240000000',
+        'contact_email' => 'consultorio@dra-yorlenis.com',
+        'contact_direccion' => 'Acarigua, Portuguesa, Venezuela',
+        'social_instagram' => '#',
+        'social_facebook' => '#',
+        'frase_institucional' => 'Tu salud, mi compromiso. Atención cálida, profesional y especializada en cada etapa de tu vida.'
+    ];
 
     $response = array_key_exists($nombre, $data) ? $data[$nombre] : 'Valor Default NO definido.';
     $parametro = \App\Models\Parametro::where('nombre', $nombre)->first();

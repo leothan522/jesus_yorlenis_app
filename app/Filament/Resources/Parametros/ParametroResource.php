@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Parametros;
 
 use App\Filament\Resources\Parametros\Pages\ManageParametros;
+use App\Filament\Resources\Parametros\Widgets\ParametrosWidget;
 use App\Models\Parametro;
 use BackedEnum;
 use Filament\Actions\Action;
@@ -89,4 +90,12 @@ class ParametroResource extends Resource
             'index' => ManageParametros::route('/'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            ParametrosWidget::class
+        ];
+    }
+
 }

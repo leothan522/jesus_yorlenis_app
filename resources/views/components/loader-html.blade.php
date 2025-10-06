@@ -28,10 +28,12 @@
 
                 const isSidebar = link.closest('aside');
                 const isInternal = link.href?.startsWith(window.location.origin);
+                const isMenuLink = link.classList.contains('menu-link');
 
-                if (isSidebar && isInternal) {
+                if ((isSidebar || isMenuLink) && isInternal) {
                     Alpine.store('loader').show();
                 }
+
             });
         });
     </script>

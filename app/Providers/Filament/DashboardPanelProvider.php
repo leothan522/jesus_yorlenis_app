@@ -65,11 +65,18 @@ class DashboardPanelProvider extends PanelProvider
             ->profile(isSimple: false)
             ->favicon(asset('favicons/appicon-128x128.png'))
             ->userMenuItems([
-                'profile' => fn(Action $action) => $action->label(Str::ucwords(auth()->user()->name))->url(fn():string => route('profile.show')),
+                'profile' => fn(Action $action) => $action
+                    ->label(Str::ucwords(auth()->user()->name))
+                    ->url(fn():string => route('profile.show'))
+                    ->extraAttributes(['class' => 'menu-link']),
                 'web' => fn(Action $action) => $action::make('ir_inicio')
                     ->label(fn(): string => __('Go Home'))
                     ->icon(Heroicon::OutlinedHomeModern)
-                    ->url(fn():string => route('web.index')),
+                    ->url(fn():string => route('web.index'))
+                    ->extraAttributes(['class' => 'menu-link']),
+                'logout' => fn (Action $action) => $action->extraAttributes([
+                    'onclick' => "Alpine.store('loader').show();",
+                ]),
             ]);
     }
 }

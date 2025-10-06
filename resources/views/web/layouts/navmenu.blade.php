@@ -1,6 +1,12 @@
 <nav id="navmenu" class="navmenu">
     <ul x-data>
-        <li><a href="#hero" class="active">Inicio</a></li>
+        <li>
+            @if(Route::currentRouteName() == 'web.index')
+                <a href="#hero" class="active">Inicio</a>
+            @else
+                <a href="{{ route('web.index') }}">Inicio</a>
+            @endif
+        </li>
         <li><a href="#about">Sobre la doctora</a></li>
         <li><a href="#doctors">Especialista</a></li>
         @guest
@@ -18,7 +24,7 @@
                     <li><a href="#" class="d-md-none">Agendar cita</a></li>
                     <li><a href="#">Mis citas</a></li>
                     <li><a href="#">Ficha médica</a></li>
-                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="{{ route('profile.show') }}">Mi perfil</a></li>
                     <li>
                         <a href="#" @click.prevent="mostrarPreloader(); $root.querySelector('#logout_form').submit()">{{ __('Logout') }}</a>
                         <form id="logout_form" method="POST" action="{{ route('logout') }}">

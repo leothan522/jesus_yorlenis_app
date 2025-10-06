@@ -72,10 +72,6 @@
 
 <main class="main">
 
-    <!-- Hero Section -->
-    @include('web.layouts.hero')
-    <!-- /Hero Section -->
-
     @yield('content')
 
 </main>

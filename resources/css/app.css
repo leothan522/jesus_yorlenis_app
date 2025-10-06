@@ -5,3 +5,50 @@
 [x-cloak] {
     display: none;
 }
+
+/* Fondo gris detrás del modal */
+.jetstream-modal .bg-gray-500 {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+
+.jetstream-modal .bg-gray-500.opacity-75 {
+    display: none !important;
+}
+
+/* Asegura que el fondo cubra toda la pantalla */
+.jetstream-modal .fixed.inset-0 {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1050;
+}
+
+/* Contenedor del modal: centrado vertical y horizontal */
+.jetstream-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Modal interno: elimina margen superior que lo empuja */
+.jetstream-modal > div[style] {
+    margin-top: 0 !important;
+}
+
+.jetstream-modal .fixed.inset-0 {
+    z-index: 10;
+}
+
+
+
+
+
+
+

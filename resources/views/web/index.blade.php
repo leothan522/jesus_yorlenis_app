@@ -4,6 +4,10 @@
 
 @section('content')
 
+    <!-- Hero Section -->
+    @include('web.layouts.hero')
+    <!-- /Hero Section -->
+
     <!-- About Section -->
     @include('web.sections.about-section')
     <!-- /About Section -->

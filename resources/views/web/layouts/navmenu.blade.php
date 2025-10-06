@@ -24,7 +24,7 @@
                     <li><a href="#" class="d-md-none">Agendar cita</a></li>
                     <li><a href="#">Mis citas</a></li>
                     <li><a href="#">Ficha médica</a></li>
-                    <li><a href="{{ route('profile.show') }}">Mi perfil</a></li>
+                    <li><a href="{{ route('profile.show') }}" @click="mostrarPreloader()">Mi perfil</a></li>
                     <li>
                         <a href="#" @click.prevent="mostrarPreloader(); $root.querySelector('#logout_form').submit()">{{ __('Logout') }}</a>
                         <form id="logout_form" method="POST" action="{{ route('logout') }}">

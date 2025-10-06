@@ -5,16 +5,8 @@
 @section('content')
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-        <nav class="breadcrumbs">
-            <div class="container">
-                <ol>
-                    <li><a href="{{ route('profile.show') }}">Mi Perfil</a></li>
-                    <li class="current">{{ Str::upper(auth()->user()->name) }}</li>
-                </ol>
-            </div>
-        </nav>
-    </div><!-- End Page Title -->
+    @include('web.layouts.breadcrumbs')
+    <!-- End Page Title -->
 
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">

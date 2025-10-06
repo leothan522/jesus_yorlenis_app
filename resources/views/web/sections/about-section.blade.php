@@ -37,13 +37,15 @@
                         </div>
                     </li>
                 </ul>
-                @guest
-                    <div x-data class="mt-5 text-center d-md-none">
-                        <a href="#" @click.prevent="mostrarAlertAuth()" class="btn btn-primary px-4 py-2 rounded-pill">
-                            Agendar cita
-                        </a>
-                    </div>
-                @endguest
+
+                <div x-data class="mt-5 text-center d-md-none">
+                    @guest
+                        <a href="#" @click.prevent="mostrarAlertAuth()" class="btn btn-primary px-4 py-2 rounded-pill">Agendar cita</a>
+                    @else
+                        <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Agendar cita</a>
+                    @endguest
+                </div>
+
 
             </div>
 

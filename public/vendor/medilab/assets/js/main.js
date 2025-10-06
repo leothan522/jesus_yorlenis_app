@@ -39,7 +39,8 @@
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
+        const isDropdown = navmenu.closest('.dropdown');
+        if (!isDropdown && document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
     });
@@ -64,7 +65,8 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+        //preloader.remove();
+        preloader.classList.add('d-none');
     });
   }
 

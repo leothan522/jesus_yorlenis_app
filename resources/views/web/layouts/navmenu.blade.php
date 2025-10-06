@@ -1,42 +1,40 @@
 <nav id="navmenu" class="navmenu">
-    <ul>
+    <ul x-data>
         <li><a href="#hero" class="active">Inicio</a></li>
         <li><a href="#about">Sobre la doctora</a></li>
         <li><a href="#doctors">Especialista</a></li>
-        <li><a href="#appointment" class="d-md-none">Agendar cita</a></li>
+        @guest
+            <li><a href="{{ route('login') }}" @click="mostrarPreloader()">{{ __('Login') }}</a></li>
+            @if(Route::has('register'))
+                <li><a href="{{ route('register') }}" @click="mostrarPreloader()">{{ __('Register') }}</a></li>
+            @endif
+            <li><a href="#" class="d-md-none" @click.prevent="mostrarAlertAuth()">Agendar cita</a></li>
+        @else
+            <li class="dropdown">
+                <a href="#" @click.prevent="$root.querySelector('#btn_dropdown').click()">
+                    <span>Mi cuenta</span> <i id="btn_dropdown" class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                    <li><a href="#" class="d-md-none">Agendar cita</a></li>
+                    <li><a href="#">Mis citas</a></li>
+                    <li><a href="#">Ficha médica</a></li>
+                    <li><a href="#">Mi perfil</a></li>
+                    <li>
+                        <a href="#" @click.prevent="mostrarPreloader(); $root.querySelector('#logout_form').submit()">{{ __('Logout') }}</a>
+                        <form id="logout_form" method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="d-none">Cerrar sesión</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        @endguest
     </ul>
     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
-<a class="cta-btn d-none d-sm-block" href="#appointment">Agendar cita</a>
-
-{{--<nav id="navmenu" class="navmenu">
-    <ul>
-        <li><a href="#hero" class="active">Home<br></a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#departments">Departments</a></li>
-        <li><a href="#doctors">Doctors</a></li>
-        <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">Deep Dropdown 1</a></li>
-                        <li><a href="#">Deep Dropdown 2</a></li>
-                        <li><a href="#">Deep Dropdown 3</a></li>
-                        <li><a href="#">Deep Dropdown 4</a></li>
-                        <li><a href="#">Deep Dropdown 5</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-            </ul>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
-
-<a class="cta-btn d-none d-sm-block" href="#appointment">Make an Appointment</a>--}}
+@guest
+    <a x-data href="#" class="cta-btn d-none d-sm-block" @click.prevent="mostrarAlertAuth()">Agendar cita</a>
+@else
+    <a href="#" class="cta-btn d-none d-sm-block">Agendar cita</a>
+@endguest

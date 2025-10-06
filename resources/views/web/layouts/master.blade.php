@@ -46,6 +46,7 @@
 
     <link href="{{ asset('css/web/style.css') }}" rel="stylesheet">
     @stack('css')
+    @vite(['resources/js/sweetalert.js', 'resources/js/web-app.js'])
     @livewireStyles
 </head>
 

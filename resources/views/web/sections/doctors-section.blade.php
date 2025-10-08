@@ -20,10 +20,10 @@
                         <span>Ginecólogo · Obstetra · ULA</span>
                         <p>Especialista en planificación familiar, control prenatal, menopausia, cirugía ginecológica y atención integral de la salud femenina.</p>
                         <div class="social">
-                            <a href="https://instagram.com/usuario" target="_blank"><i class="bi bi-instagram"></i></a>
-                            <a href="https://facebook.com/usuario" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="https://wa.me/584240000000?text=Hola%20Dra.%20Yorlenis%2C%20quisiera%20agendar%20una%20consulta" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                            <a href="mailto:correo@ejemplo.com"><i class="bi bi-envelope"></i></a>
+                            <a href="{{ getParametro('social_instagram') }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="{{ getParametro('social_facebook') }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://wa.me/{{ formatearTelefonoParaWhatsapp(getParametro('contact_telefono')) }}?text=Hola%20Dra.%20Yorlenis%2C%20quisiera%20agendar%20una%20consulta" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="mailto:{{ getParametro('contact_email') }}"><i class="bi bi-envelope"></i></a>
                         </div>
                     </div>
                 </div>

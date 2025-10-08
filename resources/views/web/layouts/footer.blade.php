@@ -8,15 +8,15 @@
                 </a>
                 <div class="footer-contact pt-3">
                     <p>Consultorio privado</p>
-                    <p>Acarigua, Portuguesa, Venezuela</p>
-                    <p class="mt-3"><strong>Teléfono:</strong> <span>+58 424 000 0000</span></p>
-                    <p><strong>Correo:</strong> <span>consultorio@dra-yorlenis.com</span></p>
+                    <p>{{ getParametro('contact_direccion') }}</p>
+                    <p class="mt-3"><strong>Teléfono:</strong> <span>{{ formatearTelefonoParaView(getParametro('contact_telefono')) }}</span></p>
+                    <p><strong>Correo:</strong> <span>{{ getParametro('contact_email') }}</span></p>
                 </div>
                 <div class="social-links d-flex mt-4">
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="https://wa.me/584240000000" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    <a href="#"><i class="bi bi-envelope"></i></a>
+                    <a href="{{ getParametro('social_instagram') }}" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="{{ getParametro('social_facebook') }}"><i class="bi bi-facebook"></i></a>
+                    <a href="https://wa.me/{{ formatearTelefonoParaWhatsapp(getParametro('contact_telefono')) }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="mailto:{{ getParametro('contact_email') }}" target="_blank"><i class="bi bi-envelope"></i></a>
                 </div>
             </div>
 

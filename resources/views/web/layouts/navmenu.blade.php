@@ -4,7 +4,7 @@
             @if(Route::currentRouteName() == 'web.index')
                 <a href="#hero" class="active">Inicio</a>
             @else
-                <a href="{{ route('web.index') }}">Inicio</a>
+                <a href="{{ route('web.index') }}" @click="mostrarPreloader()">Inicio</a>
             @endif
         </li>
         <li><a href="#about">Sobre la doctora</a></li>

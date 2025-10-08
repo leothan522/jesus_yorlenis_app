@@ -245,4 +245,15 @@ function formatearTelefonoParaWhatsapp(string $telefono, string $codigoPais = '5
     return $codigoPais . $soloNumeros;
 }
 
+function formatearTelefonoParaView($number)
+{
+    // Asegura que tenga exactamente 11 dígitos
+    if (preg_match('/^(\d{4})(\d{3})(\d{4})$/', $number, $matches)) {
+        return "{$matches[1]} {$matches[2]} {$matches[3]}";
+    }
+
+    return $number; // Retorna sin formato si no coincide
+}
+
+
 

@@ -24,9 +24,6 @@ class Paciente extends Model
         'partos',
         'cesareas',
         'abortos',
-        'tipaje_madre',
-        'tipaje_padre',
-        'tipaje_sensibilidad',
     ];
 
     public function controlPrenatal(): HasMany

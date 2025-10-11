@@ -25,9 +25,6 @@ return new class extends Migration
             $table->integer('partos')->nullable();
             $table->integer('cesareas')->nullable();
             $table->integer('abortos')->nullable();
-            $table->string('tipaje_madre')->nullable();
-            $table->string('tipaje_padre')->nullable();
-            $table->string('tipaje_sensibilidad')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
